@@ -20,8 +20,8 @@
 body {
   background-color: var(--Pale-blue);
   font-size: 16px;
-  font-weight: 500,700,900;
-  font-family: "Red Hat Display" sans-serif;
+/*   font-weight: 500,700,900; */ /* THIS IS WRONG, THE BROWER CAN ONLY TAKE A SPECIFIC FONT WEIGHT PER ELEMENT */
+  font-family: "Red Hat Display", sans-serif; /* YOU FONT-FAMILY WASN'T WORK BECAUSE YOU OMMITED A COMA AFTER "Red Hat Display" */
 }
 
 main {
@@ -34,9 +34,10 @@ main {
 }
 
 article {
-   max-width: 20%;
+   max-width: 375px; /* USING % IS ALWAYS BE RESIZING THE DESIGN TO 20% OF THE RESIZED SCREEN, INSTEAD GIVE IT A WIDTH OF 375PX WILL MAKE THE CARD WIDTH FIXED AT ANY SCREEN SIZE */
    background: var(--Very-pale-blue);
    border-radius: 10px; 
+   margin: 0 30px; /* GIVING A LEFT AND RIGHT MARGIN OF 30PX WILL GIVE THE CARD SOME SPACE WITH THE BODY EVEN AT SMALLER SCREEN SIZE OF LESS THAN 350PX OF THE CARD WIDTH AND WILL PREVENT THE CARD FROM OVERFLOWING. */
 }
 
 header img {
@@ -80,6 +81,7 @@ h5 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-right: 20px; /* THIS WILL GIVE IT SOME SPACE ON THE RIGHT EVEN ON SMALLER SCREEN SO THEY WON'T BE CHOKED UP TOGETHER */
 }
 
 .plan-option-2 {
